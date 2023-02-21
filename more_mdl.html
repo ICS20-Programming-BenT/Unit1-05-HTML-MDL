@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- ICS2O-Unit1-05-HTML-MDL -->
+<html lang="en-ca">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="description" content="My first web page, with MDL">
+	  <meta name="keywords" content="Immaculata, ICS20">
+	  <meta name="author" content="Ben Thomson">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Google's MDL -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-pink.min.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine:300,400,500,700" type="text/css">
+	  <title>My second web page, with MDL</title>
+  </head>
+  <body> 
+		<!-- Google's MDL -->
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		
+    <div class = "mdl-layout mdl-js-layout mdl-layout--fixed-header">
+			<!-- Web page header -->
+      <header class = "mdl-layout__header">
+        <div class = "mdl-layout__header-row">      
+          <span class = "mdl-layout-title">My Second Web Page using MDL Components</span>         
+        </div>       
+      </header>
+      
+			<!-- MDL Progress Bar with Buffering -->
+      <div id="p3" class="mdl-progress mdl-js-progress"></div>
+      <script>
+        document.querySelector('#p3').addEventListener('mdl-componentupgraded', function() {
+          this.MaterialProgress.setProgress(33);
+          this.MaterialProgress.setBuffer(87);
+          });
+      </script>
+
+			<!-- Container for web page content -->
+			<main class = "mdl-layout__content" style = "padding-left:20px">
+
+				<!-- Icon List -->
+      <style>
+        .demo-list-icon {
+          width: 300px;
+          }
+      </style>
+      <h5>Some of my Favourite Books:</h5>
+      <ul class="demo-list-icon mdl-list">
+        <li class="mdl-list__item">
+          <span class="mdl-list__item-primary-content">
+          <i class="material-icons mdl-list__item-icon">book</i>
+          Harry Potter and the Philosopher's Stone
+          </span>
+        </li>
+        <li class="mdl-list__item">
+          <span class="mdl-list__item-primary-content">
+          <i class="material-icons mdl-list__item-icon">book</i>
+          The Lion, the Witch and the Wardrobe
+          </span>
+        </li>
+        <li class="mdl-list__item">
+          <span class="mdl-list__item-primary-content">
+          <i class="material-icons mdl-list__item-icon">book</i>
+          A Time to Kill
+          </span>
+        </li>
+      </ul>
+				
+				<!-- Radio button -->
+				<h5>On the whole, do you enjoy school?</h5>
+				<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+				  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1">
+				  <span class="mdl-radio__label">Yes</span>
+				</label>
+				<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+				  <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2" checked>
+				  <span class="mdl-radio__label">No</span>
+				</label>
+      </main> 
+		</div>
+  </body>
+</html>
